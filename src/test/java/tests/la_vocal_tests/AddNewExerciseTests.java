@@ -34,9 +34,4 @@ public class AddNewExerciseTests extends BaseTests {
         Assert.assertTrue(app.lvExercisesPage().isExerciseSaved(exerciseName));
         app.lvExercisesPage().maxNumberOfItems(2);
     }
-
-    @Test
-    public void someTest() {
-
-    }
 }
