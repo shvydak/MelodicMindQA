@@ -8,7 +8,7 @@ import tests.BaseTests;
 
 public class AddNewExerciseTests extends BaseTests {
     @BeforeClass
-    public void preConditions() {
+    public void preConditions() throws InterruptedException {
         app.mmHomePage().openLaVocalApp();
     }
 
@@ -33,10 +33,5 @@ public class AddNewExerciseTests extends BaseTests {
         app.lvExercisesPage().clickSaveExerciseButton();
         Assert.assertTrue(app.lvExercisesPage().isExerciseSaved(exerciseName));
         app.lvExercisesPage().maxNumberOfItems(2);
-    }
-
-    @Test
-    public void someTest() {
-
     }
 }

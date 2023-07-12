@@ -12,28 +12,6 @@ public class BaseTests {
     public void setUp() {
         app.start();
     }
-//    @BeforeSuite
-//    public void setUp() throws IOException {
-//        app.start();
-//        BufferedReader reader = new BufferedReader(new FileReader(new File("loginUser.csv")));
-//        String line = reader.readLine();
-//        String[] split = line.split(",");
-//
-//        UserLogin user = UserLogin.builder()
-//                .email(split[0])
-//                .password(split[1])
-//                .build();
-//        app.homePage().clickSignInUpButton();
-//        app.homePage().clickContinueWithEmailButton();
-//        app.signInPage().login(user);
-//    }
-
-    @AfterClass
-    public void openHomePage() {
-//        app.mainPage().clickBurgerMenu();
-//        app.mainPage().clickMenuHomeButton();
-    }
-
     @AfterSuite
     public void tearDown() {
 //        app.stop();

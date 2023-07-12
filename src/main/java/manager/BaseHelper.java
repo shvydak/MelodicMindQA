@@ -2,6 +2,7 @@ package manager;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 
 public class BaseHelper {
@@ -18,5 +19,19 @@ public class BaseHelper {
         if (text != null) {
             webElement.sendKeys(text);
         }
+    }
+
+
+    public void scrollTo(WebElement webElement) {
+        new Actions(webDriver).scrollToElement(webElement).perform();
+        try {
+            Thread.sleep(250);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public boolean isElementDisplayed(WebElement webElement) {
+        return webElement.isDisplayed();
     }
 }
