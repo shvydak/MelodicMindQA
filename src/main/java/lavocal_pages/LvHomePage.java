@@ -5,8 +5,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class HomePage extends BaseHelper {
-    public HomePage(WebDriver webDriver) {
+public class LvHomePage extends BaseHelper {
+    public LvHomePage(WebDriver webDriver) {
         super(webDriver);
     }
 

@@ -6,8 +6,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class SignInPage extends BaseHelper {
-    public SignInPage(WebDriver webDriver) {
+public class LvSignInPage extends BaseHelper {
+    public LvSignInPage(WebDriver webDriver) {
         super(webDriver);
     }
 

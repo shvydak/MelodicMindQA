@@ -8,8 +8,8 @@ import org.openqa.selenium.support.FindBy;
 
 import java.util.List;
 
-public class ExercisesPage extends BaseHelper {
-    public ExercisesPage(WebDriver webDriver) {
+public class LvExercisesPage extends BaseHelper {
+    public LvExercisesPage(WebDriver webDriver) {
         super(webDriver);
     }
 
