@@ -1,4 +1,4 @@
-package pages;
+package lavocal_pages;
 
 import manager.BaseHelper;
 import org.openqa.selenium.By;

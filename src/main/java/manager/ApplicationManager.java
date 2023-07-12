@@ -3,10 +3,10 @@ package manager;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import pages.ExercisesPage;
-import pages.HomePage;
-import pages.MainPage;
-import pages.SignInPage;
+import lavocal_pages.ExercisesPage;
+import lavocal_pages.HomePage;
+import lavocal_pages.MainPage;
+import lavocal_pages.SignInPage;
 
 import java.time.Duration;
 

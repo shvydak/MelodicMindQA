@@ -1,8 +1,9 @@
-package tests;
+package tests.la_vocal_tests;
 
 import com.github.javafaker.Faker;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import tests.BaseTests;
 
 public class AddNewExerciseTests extends BaseTests {
 
