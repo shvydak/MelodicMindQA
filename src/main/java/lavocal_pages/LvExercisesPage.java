@@ -28,13 +28,13 @@ public class LvExercisesPage extends BaseHelper {
     WebElement harmonyDropDownListMinorTriad;
     @FindBy(xpath = "//*[@class='q-item__label' and text()='Perfect Fifth']")
     WebElement harmonyDropDownListPerfectFifth;
-    @FindBy(xpath = "//button[@class='app-btn plain medium text-black']")
+    @FindBy(xpath = "//div[text()=' Add Notes ']")
     WebElement addNotesButton;
     @FindBy(xpath = "//div[@class='app-btn__content' and text()=' Type manually ']")
     WebElement typeManualyButton;
     @FindBy(xpath = "//div[@class='white']//*[@class='white']")
     WebElement keys;
-    @FindBy(xpath = "//button[@class='app-btn secondary medium text-black']//*[text()=' Save ']")
+    @FindBy(xpath = "(//div[@class='app-btn__content' and text()=' Save '])[2]")
     WebElement saveIntervalButton;
     @FindBy(xpath = "//div[text()=' Save ']")
     WebElement saveExerciseButton;
