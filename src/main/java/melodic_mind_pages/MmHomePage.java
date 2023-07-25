@@ -63,17 +63,17 @@ public class MmHomePage extends BaseHelper {
         Assert.assertTrue(laVocalOpenButton.isDisplayed());
     }
 
-    public void musicGuruOpenButtonAppeared() {
+    public void isMusicGuruOpenButtonAppeared() {
         scrollTo(musicGuruOpenButton);
         Assert.assertTrue(musicGuruOpenButton.isDisplayed());
     }
 
-    public void songWriterStudioLearnMoreButtonAppeared() {
+    public void isSongWriterStudioLearnMoreButtonAppeared() {
         scrollTo(songWriterStudioLearnMoreButton);
         Assert.assertTrue(songWriterStudioLearnMoreButton.isDisplayed());
     }
 
-    public void earWizardLearnMoreButtonAppeared() {
+    public void isEarWizardLearnMoreButtonAppeared() {
         scrollTo(earWizardLearnMoreButton);
         Assert.assertTrue(earWizardLearnMoreButton.isDisplayed());
     }
