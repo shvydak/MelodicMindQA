@@ -100,6 +100,8 @@ public class LvExercisesPage extends BaseHelper {
     }
 
     public void clickSaveExerciseButton() {
+        waitUntilVisible(saveExerciseButton);
+        waitUntilClickable(saveExerciseButton);
         saveExerciseButton.click();
     }
 

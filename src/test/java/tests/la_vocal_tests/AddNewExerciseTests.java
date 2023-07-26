@@ -2,6 +2,7 @@ package tests.la_vocal_tests;
 
 import com.github.javafaker.Faker;
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import tests.BaseTests;
@@ -12,7 +13,7 @@ public class AddNewExerciseTests extends BaseTests {
         app.mmHomePage().openLaVocalApp();
     }
 
-    @Test(invocationCount = 1)
+    @Test(invocationCount = 2)
     public void test1() {
         String exerciseName = Faker.instance().animal().name();
 
@@ -33,5 +34,10 @@ public class AddNewExerciseTests extends BaseTests {
         app.lvExercisesPage().clickSaveExerciseButton();
         Assert.assertTrue(app.lvExercisesPage().isExerciseSaved(exerciseName));
         app.lvExercisesPage().maxNumberOfItems(2);
+    }
+    @AfterMethod
+    public void postConditions(){
+        app.lvMainPage().clickBurgerMenu();
+        app.lvMainPage().clickMenuHomeButton();
     }
 }
