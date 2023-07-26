@@ -48,10 +48,10 @@ public class MmHomePage extends BaseHelper {
     @FindBy(xpath = "//div[@class='text-center text-grey-5' and text()=' All rights reserved @ Melodic Mind 2023']")
     WebElement allRightsReservedFooter;
 
-    public void openLaVocalApp() throws InterruptedException {
+    public void openLaVocalApp() {
         scrollTo(laVocalOpenButton);
         laVocalOpenButton.click();
-        Thread.sleep(5000);
+        pause(5000);
         Set<String> windowHandles = webDriver.getWindowHandles();
         for (String windowHandle : windowHandles) {
             webDriver.switchTo().window(windowHandle);

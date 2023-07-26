@@ -31,7 +31,11 @@ public class BaseHelper {
         }
     }
 
-    public boolean isElementDisplayed(WebElement webElement) {
-        return webElement.isDisplayed();
+    public void pause(int time){
+        try {
+            Thread.sleep(time);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

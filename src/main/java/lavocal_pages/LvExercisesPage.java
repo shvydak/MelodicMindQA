@@ -50,11 +50,7 @@ public class LvExercisesPage extends BaseHelper {
 
     public void clickNewExerciseButton() {
         newExerciseButton.click();
-        try {
-            Thread.sleep(4000);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
+        pause(4000);
     }
 
     public void fillExerciseName(String text) {
@@ -83,11 +79,7 @@ public class LvExercisesPage extends BaseHelper {
 
     public void clickAddNotesButton() {
         addNotesButton.click();
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
+        pause(2000);
     }
 
     public void clickTypeManualyButton() {
@@ -111,11 +103,7 @@ public class LvExercisesPage extends BaseHelper {
 
 
     public boolean isExerciseSaved(String name) {
-        try {
-            Thread.sleep(5000);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
+        pause(5000);
         List<WebElement> list = webDriver.findElements(By.xpath("//h6"));
         if (list.size() >= 6) {
 //            if (seeAllButton.isDisplayed())
@@ -148,11 +136,7 @@ public class LvExercisesPage extends BaseHelper {
         exerciseMenu.click();
         deleteMenuButton.click();
         confirmDeleteButton.click();
-        try {
-            Thread.sleep(3000);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
+        pause(2000);
     }
 }
 
