@@ -24,9 +24,7 @@ public class ApplicationManager {
         webDriver = new ChromeDriver();
         webDriver.manage().window().maximize();
         webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-//        webDriver.navigate().to("https://la-vocal.melodic-mind.com/");
         webDriver.navigate().to("https://melodic-mind.com/");
-//        webDriver.navigate().to("https://la-vocal-staging.web.app/home");
 
         lvHomePage = new LvHomePage(webDriver);
         lvSignInPage = new LvSignInPage(webDriver);

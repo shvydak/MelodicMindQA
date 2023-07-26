@@ -12,13 +12,15 @@ public class LvMainPage extends BaseHelper {
 
     @FindBy(xpath = "//button[@class='navigation-btn']")
     WebElement exercise;
-    @FindBy(xpath = "//i[@class='q-icon text-white notranslate material-icons' and text()='menu']")
+    @FindBy(xpath = "(//button[@type='button'])[1]")
     WebElement burgerMenu;
-    @FindBy(xpath = "//div[@class='q-item__section column q-item__section--main justify-center' and text()='Home']")
+    @FindBy(xpath = "//div[text()='Home']")
     WebElement menuHomeButton;
 
     public void clickExerciseButton() {
+        waitUntilClickable(exercise);
         exercise.click();
+        pause(3000);
     }
 
     public void clickBurgerMenu() {
