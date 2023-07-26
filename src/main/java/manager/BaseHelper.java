@@ -24,11 +24,7 @@ public class BaseHelper {
 
     public void scrollTo(WebElement webElement) {
         new Actions(webDriver).scrollToElement(webElement).perform();
-        try {
-            Thread.sleep(250);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
+        pause(250);
     }
 
     public void pause(int time){
