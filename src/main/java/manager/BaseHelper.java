@@ -43,6 +43,7 @@ public class BaseHelper {
         WebDriverWait wait = new WebDriverWait(webDriver, Duration.ofSeconds(5));
         wait.until(ExpectedConditions.elementToBeClickable(webElement));
     }
+
     public void waitUntilVisible(WebElement webElement) {
         WebDriverWait wait = new WebDriverWait(webDriver, Duration.ofSeconds(5));
         wait.until(ExpectedConditions.visibilityOf(webElement));

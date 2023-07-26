@@ -13,7 +13,7 @@ public class AddNewExerciseTests extends BaseTests {
         app.mmHomePage().openLaVocalApp();
     }
 
-    @Test(invocationCount = 2)
+    @Test(invocationCount = 3)
     public void test1() {
         String exerciseName = Faker.instance().animal().name();
 
@@ -29,14 +29,15 @@ public class AddNewExerciseTests extends BaseTests {
         app.lvExercisesPage().clickHarmonyDropDownList();
         app.lvExercisesPage().clickHarmonyDropDownListPerfectFifth();
         app.lvExercisesPage().clickAddNotesButton();
-        app.lvExercisesPage().clickOnKey();
+        app.lvExercisesPage().clickOnKeys();
         app.lvExercisesPage().clickOnSaveButton();
         app.lvExercisesPage().clickSaveExerciseButton();
         Assert.assertTrue(app.lvExercisesPage().isExerciseSaved(exerciseName));
         app.lvExercisesPage().maxNumberOfItems(2);
     }
+
     @AfterMethod
-    public void postConditions(){
+    public void returnToMainPage() {
         app.lvMainPage().clickBurgerMenu();
         app.lvMainPage().clickMenuHomeButton();
     }
