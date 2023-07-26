@@ -32,7 +32,7 @@ public class LvExercisesPage extends BaseHelper {
     WebElement addNotesButton;
     @FindBy(xpath = "//div[@class='app-btn__content' and text()=' Type manually ']")
     WebElement typeManualyButton;
-//    @FindBy(xpath = "//div[@class='white']//*[@class='white']")
+    //    @FindBy(xpath = "//div[@class='white']//*[@class='white']")
     @FindBy(xpath = "(//div[@class='white'])[4]")
     WebElement keys;
     @FindBy(xpath = "(//div[@class='app-btn__content' and text()=' Save '])[2]")
@@ -50,7 +50,8 @@ public class LvExercisesPage extends BaseHelper {
 
     public void clickNewExerciseButton() {
         newExerciseButton.click();
-        pause(4000);
+        waitUntilVisible(exerciseName);
+        //        pause(4000);
     }
 
     public void fillExerciseName(String text) {
@@ -79,7 +80,8 @@ public class LvExercisesPage extends BaseHelper {
 
     public void clickAddNotesButton() {
         addNotesButton.click();
-        pause(2000);
+        waitUntilClickable(keys);
+//        pause(2000);
     }
 
     public void clickTypeManualyButton() {
