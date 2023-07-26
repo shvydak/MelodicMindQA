@@ -136,6 +136,7 @@ public class LvExercisesPage extends BaseHelper {
     public void deleteExercise() {
         exerciseMenu.click();
         deleteMenuButton.click();
+        waitUntilClickable(confirmDeleteButton);
         confirmDeleteButton.click();
         pause(2000);
     }
