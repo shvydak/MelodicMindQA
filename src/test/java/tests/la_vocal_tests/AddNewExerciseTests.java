@@ -9,7 +9,7 @@ import tests.BaseTests;
 
 public class AddNewExerciseTests extends BaseTests {
     @BeforeClass
-    public void preConditions() throws InterruptedException {
+    public void preConditions(){
         app.mmHomePage().openLaVocalApp();
     }
 

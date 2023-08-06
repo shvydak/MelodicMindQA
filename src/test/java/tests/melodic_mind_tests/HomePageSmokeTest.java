@@ -7,6 +7,7 @@ public class HomePageSmokeTest extends BaseTests {
 
     @Test
     public void checkMostImportantElements() {
+        app.mmHomePage().isHeaderElementsAppeared();
         app.mmHomePage().isLaVocalOpenButtonAppeared();
         app.mmHomePage().isMusicGuruOpenButtonAppeared();
         app.mmHomePage().isSongWriterStudioLearnMoreButtonAppeared();
