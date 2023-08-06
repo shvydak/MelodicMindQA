@@ -16,11 +16,16 @@ public class LvMainPage extends BaseHelper {
     WebElement burgerMenu;
     @FindBy(xpath = "//div[text()='Home']")
     WebElement menuHomeButton;
+    @FindBy(xpath = "//span[text()=' Sign in/up ']")
+    WebElement signInUpHeaderButton;
+    @FindBy(xpath = "//span[text()=' Continue with Email ']")
+    WebElement continueWithEmailButton;
+
 
     public void clickExerciseButton() {
         waitUntilClickable(exercise);
         exercise.click();
-        pause(3000);
+        pause(3000); // for music library loading
     }
 
     public void clickBurgerMenu() {
@@ -29,5 +34,12 @@ public class LvMainPage extends BaseHelper {
 
     public void clickMenuHomeButton() {
         menuHomeButton.click();
+    }
+
+    public void logInViaEmail() {
+        waitUntilClickable(signInUpHeaderButton);
+        signInUpHeaderButton.click();
+        waitUntilClickable(continueWithEmailButton);
+        continueWithEmailButton.click();
     }
 }
