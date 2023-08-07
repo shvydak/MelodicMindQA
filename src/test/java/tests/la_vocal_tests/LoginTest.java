@@ -16,5 +16,7 @@ public class LoginTest extends BaseTests {
     public void loginSuccess(UserLogin user) {
         app.lvMainPage().logInViaEmail();
         app.signInUpPage().fillAndSubmitSignInForm(user);
+        app.lvMainPage().clickUserHeaderButton();
+        app.lvMainPage().isLoggedIn();
     }
 }
