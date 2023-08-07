@@ -4,6 +4,7 @@ import manager.BaseHelper;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.testng.Assert;
 
 public class LvMainPage extends BaseHelper {
     public LvMainPage(WebDriver webDriver) {
@@ -16,11 +17,20 @@ public class LvMainPage extends BaseHelper {
     WebElement burgerMenu;
     @FindBy(xpath = "//div[text()='Home']")
     WebElement menuHomeButton;
+    @FindBy(xpath = "//span[text()=' Sign in/up ']")
+    WebElement signInUpHeaderButton;
+    @FindBy(xpath = "//span[text()=' Continue with Email ']")
+    WebElement continueWithEmailButton;
+    @FindBy(xpath = "(//*[name()='svg'])[3]")
+    WebElement userHeaderButton;
+    @FindBy(xpath = "//div[text()='Logout']")
+    WebElement logoutHeaderButton;
+
 
     public void clickExerciseButton() {
         waitUntilClickable(exercise);
         exercise.click();
-        pause(3000);
+        pause(3000); // for music library loading
     }
 
     public void clickBurgerMenu() {
@@ -29,5 +39,28 @@ public class LvMainPage extends BaseHelper {
 
     public void clickMenuHomeButton() {
         menuHomeButton.click();
+    }
+
+    public void logInViaEmail() {
+        waitUntilClickable(signInUpHeaderButton);
+        signInUpHeaderButton.click();
+        waitUntilClickable(continueWithEmailButton);
+        continueWithEmailButton.click();
+    }
+
+    public void clickUserHeaderButton() {
+        pause(2000);
+        userHeaderButton.click();
+    }
+
+    public void clickLogoutHeaderButton() {
+        waitUntilClickable(logoutHeaderButton);
+        logoutHeaderButton.click();
+    }
+
+    public void isLoggedIn() {
+        clickUserHeaderButton();
+        waitUntilVisible(logoutHeaderButton);
+        Assert.assertTrue(logoutHeaderButton.isDisplayed());
     }
 }

@@ -18,6 +18,7 @@ public class BaseHelper {
     }
 
     public void type(WebElement webElement, String text) {
+        waitUntilClickable(webElement);
         webElement.click();
         webElement.clear();
         if (text != null) {
