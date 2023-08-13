@@ -73,6 +73,8 @@ public class MmHomePage extends BaseHelper {
 
     public void openLaVocalApp() {
         scrollTo(laVocalOpenButton);
+        pause(3000);
+        waitUntilClickable(laVocalOpenButton);
         laVocalOpenButton.click();
         Set<String> windowHandles = webDriver.getWindowHandles();
         for (String windowHandle : windowHandles) {
