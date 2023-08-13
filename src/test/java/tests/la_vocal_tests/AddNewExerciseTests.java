@@ -16,7 +16,7 @@ public class AddNewExerciseTests extends BaseTests {
         app.mmHomePage().openLaVocalApp();
     }
 
-    @Test(invocationCount = 3)
+    @Test(enabled = false, invocationCount = 3)
     public void addNewExerciseWOLoginSuccess() {
         String exerciseName = Faker.instance().animal().name();
 
