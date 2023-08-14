@@ -12,6 +12,7 @@ public class SmokeTests extends BaseTests {
 
     @Test
     public void mainPageSmokeTest() {
-        app.lvMainPage().smokeTest();
+        app.lvMainPage().checkMainActivities();
+        app.lvMainPage().checkMenuActivities();
     }
 }

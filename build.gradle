@@ -39,3 +39,8 @@ task melodic_mind(type: Test) {
         suites('src/test/java/tests/config/MelodicMindSmokeTests.xml')
     }
 }
+task la_vocal_smoke(type: Test) {
+    useTestNG() {
+        suites('src/test/java/tests/config/LaVocalSmokeTests.xml')
+    }
+}
