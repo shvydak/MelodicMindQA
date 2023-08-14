@@ -16,7 +16,7 @@ public class AddNewExerciseTests extends BaseTests {
         app.mmHomePage().openLaVocalApp();
     }
 
-    @Test(invocationCount = 3)
+    @Test(enabled = true, invocationCount = 3)
     public void addNewExerciseWOLoginSuccess() {
         String exerciseName = Faker.instance().animal().name();
 
@@ -39,7 +39,7 @@ public class AddNewExerciseTests extends BaseTests {
         app.lvExercisesPage().maxNumberOfItems(2);
     }
 
-    @Test(enabled = true, dataProvider = "loginDataProvider", dataProviderClass = TestDataProvider.class)
+    @Test(dataProvider = "loginDataProvider", dataProviderClass = TestDataProvider.class)
     public void addNewExerciseWithLoginSuccess(UserLogin user) {
         String exerciseName = Faker.instance().animal().name();
 
