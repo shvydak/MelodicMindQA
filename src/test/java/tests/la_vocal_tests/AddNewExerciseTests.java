@@ -62,7 +62,7 @@ public class AddNewExerciseTests extends BaseTests {
         app.lvExercisesPage().clickOnSaveButton();
         app.lvExercisesPage().clickSaveExerciseButton();
         Assert.assertTrue(app.lvExercisesPage().isExerciseSaved(exerciseName));
-        app.lvExercisesPage().maxNumberOfItems(4);
+        app.lvExercisesPage().maxNumberOfItems(2);
     }
 
     @AfterMethod
