@@ -13,6 +13,12 @@ public class LvMainPage extends BaseHelper {
 
     @FindBy(xpath = "//button[@class='navigation-btn']")
     WebElement exercise;
+    @FindBy(xpath = "//div[text()='Start a workout']")
+    WebElement startAWorkout;
+    @FindBy(xpath = "//div[text()='Practice a song']")
+    WebElement practiceASong;
+    @FindBy(xpath = "//div[text()='Record yourself']")
+    WebElement recordYourself;
     @FindBy(xpath = "(//button[@type='button'])[1]")
     WebElement burgerMenu;
     @FindBy(xpath = "//div[text()='Home']")
@@ -26,6 +32,13 @@ public class LvMainPage extends BaseHelper {
     @FindBy(xpath = "//div[text()='Logout']")
     WebElement logoutHeaderButton;
 
+    public void smokeTest(){
+        Assert.assertTrue(burgerMenu.isDisplayed());
+        Assert.assertTrue(exercise.isDisplayed());
+        Assert.assertTrue(startAWorkout.isDisplayed());
+        Assert.assertTrue(practiceASong.isDisplayed());
+        Assert.assertTrue(recordYourself.isDisplayed());
+    }
 
     public void clickExerciseButton() {
         waitUntilClickable(exercise);

@@ -7,10 +7,10 @@ import org.testng.annotations.Test;
 import tests.BaseTests;
 
 public class AddNewExerciseTests extends BaseTests {
+    String exerciseName = Faker.instance().animal().name();
+
     @Test(enabled = true, invocationCount = 1)
     public void addNewExerciseUnisonSuccess() {
-        String exerciseName = Faker.instance().animal().name();
-
         app.lvMainPage().clickExerciseButton();
         app.lvExercisesPage().clickNewExerciseButton();
         app.lvExercisesPage().fillExerciseName(exerciseName);
@@ -25,8 +25,6 @@ public class AddNewExerciseTests extends BaseTests {
 
     @Test(enabled = true, invocationCount = 1)
     public void addNewExerciseMajorTriadSuccess() {
-        String exerciseName = Faker.instance().animal().name();
-
         app.lvMainPage().clickExerciseButton();
         app.lvExercisesPage().clickNewExerciseButton();
         app.lvExercisesPage().fillExerciseName(exerciseName);
@@ -38,10 +36,9 @@ public class AddNewExerciseTests extends BaseTests {
         app.lvExercisesPage().clickSaveExerciseButton();
         Assert.assertTrue(app.lvExercisesPage().isExerciseSaved(exerciseName));
     }
+
     @Test(enabled = true, invocationCount = 1)
     public void addNewExerciseMinorTriadSuccess() {
-        String exerciseName = Faker.instance().animal().name();
-
         app.lvMainPage().clickExerciseButton();
         app.lvExercisesPage().clickNewExerciseButton();
         app.lvExercisesPage().fillExerciseName(exerciseName);
@@ -53,10 +50,9 @@ public class AddNewExerciseTests extends BaseTests {
         app.lvExercisesPage().clickSaveExerciseButton();
         Assert.assertTrue(app.lvExercisesPage().isExerciseSaved(exerciseName));
     }
+
     @Test(enabled = true, invocationCount = 1)
     public void addNewExercisePerfectFifthSuccess() {
-        String exerciseName = Faker.instance().animal().name();
-
         app.lvMainPage().clickExerciseButton();
         app.lvExercisesPage().clickNewExerciseButton();
         app.lvExercisesPage().fillExerciseName(exerciseName);
