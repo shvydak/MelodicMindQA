@@ -44,7 +44,7 @@ public class LvExercisesPage extends BaseHelper {
     WebElement saveExerciseButton;
     @FindBy(xpath = "//div[@class='app-btn__content' and text()=' See all']")
     WebElement seeAllButton;
-    @FindBy(xpath = "(//button[@tabindex='0' and @type='button'])[3]")
+    @FindBy(xpath = "(//button[@tabindex='0' and @type='button'])[4]")
     WebElement exerciseMenu;
     @FindBy(xpath = "//div[@class='q-item__section column q-item__section--main justify-center' and text()='Delete']")
     WebElement deleteMenuButton;
