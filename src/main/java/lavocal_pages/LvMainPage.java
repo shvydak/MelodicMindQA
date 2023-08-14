@@ -82,6 +82,7 @@ public class LvMainPage extends BaseHelper {
     }
 
     public void checkMainActivities() {
+        waitUntilVisible(signInUpHeaderButton);
         Assert.assertTrue(signInUpHeaderButton.isDisplayed());
         Assert.assertTrue(exercise.isDisplayed());
         Assert.assertTrue(startAWorkout.isDisplayed());
