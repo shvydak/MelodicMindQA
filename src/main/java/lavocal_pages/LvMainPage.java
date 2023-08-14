@@ -91,6 +91,7 @@ public class LvMainPage extends BaseHelper {
 
     public void checkMenuActivities() {
         clickBurgerMenu();
+        waitUntilVisible(menuHomeButton);
         Assert.assertTrue(menuHomeButton.isDisplayed());
         Assert.assertTrue(exerciseMenuButton.isDisplayed());
         Assert.assertTrue(workoutsMenuButton.isDisplayed());
