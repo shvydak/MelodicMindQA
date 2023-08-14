@@ -13,6 +13,12 @@ public class LvMainPage extends BaseHelper {
 
     @FindBy(xpath = "//button[@class='navigation-btn']")
     WebElement exercise;
+    @FindBy(xpath = "//div[text()='Start a workout']")
+    WebElement startAWorkout;
+    @FindBy(xpath = "//div[text()='Practice a song']")
+    WebElement practiceASong;
+    @FindBy(xpath = "//div[text()='Record yourself']")
+    WebElement recordYourself;
     @FindBy(xpath = "(//button[@type='button'])[1]")
     WebElement burgerMenu;
     @FindBy(xpath = "//div[text()='Home']")
@@ -25,6 +31,16 @@ public class LvMainPage extends BaseHelper {
     WebElement userHeaderButton;
     @FindBy(xpath = "//div[text()='Logout']")
     WebElement logoutHeaderButton;
+    @FindBy(xpath = "//div[text()='Exercises']")
+    WebElement exerciseMenuButton;
+    @FindBy(xpath = "//div[text()='Workouts']")
+    WebElement workoutsMenuButton;
+    @FindBy(xpath = "//div[text()='Songs']")
+    WebElement songsMenuButton;
+    @FindBy(xpath = "//div[text()='Recorder']")
+    WebElement recorderMenuButton;
+    @FindBy(xpath = "//div[text()=' Account ']")
+    WebElement accountMenuButton;
 
 
     public void clickExerciseButton() {
@@ -34,6 +50,7 @@ public class LvMainPage extends BaseHelper {
     }
 
     public void clickBurgerMenu() {
+        waitUntilClickable(burgerMenu);
         burgerMenu.click();
     }
 
@@ -62,5 +79,23 @@ public class LvMainPage extends BaseHelper {
         clickUserHeaderButton();
         waitUntilVisible(logoutHeaderButton);
         Assert.assertTrue(logoutHeaderButton.isDisplayed());
+    }
+
+    public void checkMainActivities() {
+        Assert.assertTrue(signInUpHeaderButton.isDisplayed());
+        Assert.assertTrue(exercise.isDisplayed());
+        Assert.assertTrue(startAWorkout.isDisplayed());
+        Assert.assertTrue(practiceASong.isDisplayed());
+        Assert.assertTrue(recordYourself.isDisplayed());
+    }
+
+    public void checkMenuActivities() {
+        clickBurgerMenu();
+        Assert.assertTrue(menuHomeButton.isDisplayed());
+        Assert.assertTrue(exerciseMenuButton.isDisplayed());
+        Assert.assertTrue(workoutsMenuButton.isDisplayed());
+        Assert.assertTrue(songsMenuButton.isDisplayed());
+        Assert.assertTrue(recorderMenuButton.isDisplayed());
+        Assert.assertTrue(accountMenuButton.isDisplayed());
     }
 }
