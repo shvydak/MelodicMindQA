@@ -23,10 +23,12 @@ dependencies {
 
     implementation 'com.github.javafaker:javafaker:1.0.2'
 }
-
+/*
 test {
     useTestNG()
 }
+
+ */
 task la_vocal(type: Test) {
     useTestNG() {
         suites('src/test/java/tests/config/LaVocalTests.xml')

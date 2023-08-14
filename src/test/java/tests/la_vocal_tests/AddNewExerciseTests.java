@@ -7,8 +7,8 @@ import org.testng.annotations.Test;
 import tests.BaseTests;
 
 public class AddNewExerciseTests extends BaseTests {
-    @Test(enabled = true, invocationCount = 3)
-    public void addNewExerciseWOLoginSuccess() {
+    @Test(enabled = true, invocationCount = 1)
+    public void addNewExerciseUnisonSuccess() {
         String exerciseName = Faker.instance().animal().name();
 
         app.lvMainPage().clickExerciseButton();
@@ -16,10 +16,50 @@ public class AddNewExerciseTests extends BaseTests {
         app.lvExercisesPage().fillExerciseName(exerciseName);
         app.lvExercisesPage().clickHarmonyDropDownList();
         app.lvExercisesPage().clickHarmonyDropDownListUnison();
+        app.lvExercisesPage().clickAddNotesButton();
+        app.lvExercisesPage().clickOnKeys();
+        app.lvExercisesPage().clickOnSaveButton();
+        app.lvExercisesPage().clickSaveExerciseButton();
+        Assert.assertTrue(app.lvExercisesPage().isExerciseSaved(exerciseName));
+    }
+
+    @Test(enabled = true, invocationCount = 1)
+    public void addNewExerciseMajorTriadSuccess() {
+        String exerciseName = Faker.instance().animal().name();
+
+        app.lvMainPage().clickExerciseButton();
+        app.lvExercisesPage().clickNewExerciseButton();
+        app.lvExercisesPage().fillExerciseName(exerciseName);
         app.lvExercisesPage().clickHarmonyDropDownList();
         app.lvExercisesPage().clickHarmonyDropDownListMajorTriad();
+        app.lvExercisesPage().clickAddNotesButton();
+        app.lvExercisesPage().clickOnKeys();
+        app.lvExercisesPage().clickOnSaveButton();
+        app.lvExercisesPage().clickSaveExerciseButton();
+        Assert.assertTrue(app.lvExercisesPage().isExerciseSaved(exerciseName));
+    }
+    @Test(enabled = true, invocationCount = 1)
+    public void addNewExerciseMinorTriadSuccess() {
+        String exerciseName = Faker.instance().animal().name();
+
+        app.lvMainPage().clickExerciseButton();
+        app.lvExercisesPage().clickNewExerciseButton();
+        app.lvExercisesPage().fillExerciseName(exerciseName);
         app.lvExercisesPage().clickHarmonyDropDownList();
         app.lvExercisesPage().clickHarmonyDropDownListMinorTriad();
+        app.lvExercisesPage().clickAddNotesButton();
+        app.lvExercisesPage().clickOnKeys();
+        app.lvExercisesPage().clickOnSaveButton();
+        app.lvExercisesPage().clickSaveExerciseButton();
+        Assert.assertTrue(app.lvExercisesPage().isExerciseSaved(exerciseName));
+    }
+    @Test(enabled = true, invocationCount = 1)
+    public void addNewExercisePerfectFifthSuccess() {
+        String exerciseName = Faker.instance().animal().name();
+
+        app.lvMainPage().clickExerciseButton();
+        app.lvExercisesPage().clickNewExerciseButton();
+        app.lvExercisesPage().fillExerciseName(exerciseName);
         app.lvExercisesPage().clickHarmonyDropDownList();
         app.lvExercisesPage().clickHarmonyDropDownListPerfectFifth();
         app.lvExercisesPage().clickAddNotesButton();
@@ -27,11 +67,11 @@ public class AddNewExerciseTests extends BaseTests {
         app.lvExercisesPage().clickOnSaveButton();
         app.lvExercisesPage().clickSaveExerciseButton();
         Assert.assertTrue(app.lvExercisesPage().isExerciseSaved(exerciseName));
-        app.lvExercisesPage().maxNumberOfItems(2);
     }
 
     @AfterMethod
     public void returnToMainPage() {
+        app.lvExercisesPage().maxNumberOfItems(4);
         app.lvMainPage().clickBurgerMenu();
         app.lvMainPage().clickMenuHomeButton();
     }
