@@ -67,7 +67,7 @@ public class AddNewExerciseTests extends BaseTests {
 
     @AfterMethod
     public void returnToMainPage() {
-        app.lvExercisesPage().maxNumberOfItems(4);
+        app.lvExercisesPage().maxNumberOfItems(3);
         app.lvMainPage().clickBurgerMenu();
         app.lvMainPage().clickMenuHomeButton();
     }
