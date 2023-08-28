@@ -18,7 +18,7 @@ public class ApplicationManager {
     SignInUpPage signInUpPage;
 
     public void start() {
-        WebDriverManager.chromedriver().setup();
+//        WebDriverManager.chromedriver().setup();
         webDriver = new ChromeDriver();
         webDriver.manage().window().maximize();
         webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
