@@ -21,6 +21,13 @@ pipeline {
         }
       }
     }
+    stage('LaVocal Main Test') {
+      steps {
+        withGradle() {
+          bat 'gradlew clean la_vocal'
+        }
+      }
+    }
 
   }
 }
