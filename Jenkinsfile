@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Base Site') {
       steps {
-        sh './gradlew clean la_vocal_smoke'
+        sh 'gradlew clean la_vocal_smoke'
       }
     }
 
