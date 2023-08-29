@@ -1,19 +1,16 @@
 pipeline {
   agent any
   stages {
-    stage('MM smoke') {
+    stage('Clone Repository') {
       steps {
-        withGradle() {
-          sh 'clean melodic_mind_smoke'
-        }
-
+        git(url: 'https://github.com/shvydak/MelodicMindQA.git', branch: 'dev1')
       }
     }
 
-    stage('La-Vocal Smoke') {
+    stage('Build The Project') {
       steps {
         withGradle() {
-          sh 'clean la_vocal_smoke'
+          bat 'gradlew clean melodic_mind_smoke'
         }
 
       }
