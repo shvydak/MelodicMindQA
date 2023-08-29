@@ -3,10 +3,7 @@ pipeline {
   stages {
     stage('Base Site') {
       steps {
-        withGradle() {
-          sh 'clean melodic_mind_smoke'
-        }
-
+        sh './gradlew clean la_vocal_smoke'
       }
     }
 
