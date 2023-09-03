@@ -33,7 +33,7 @@ public class ApplicationManager {
     }
 
     public void stop() {
-        webDriver.close();
+        webDriver.quit();
     }
 
     public LvHomePage lvHomePage() {
